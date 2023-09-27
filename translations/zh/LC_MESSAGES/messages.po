@@ -206,7 +206,7 @@ msgstr "换一批"
 
 #: blogin/templates/main/index.html:17 blogin/templates/main/index.html:46
 msgid "ClearWater"
-msgstr "清水"
+msgstr "Charles"
 
 #: blogin/templates/main/index.html:17
 msgid "'s Profile"
@@ -218,7 +218,7 @@ msgstr "个人网站"
 
 #: blogin/templates/main/index.html:26
 msgid "ClearWater's Website"
-msgstr "清水的个人网站"
+msgstr "Charles的个人网站"
 
 #: blogin/templates/main/index.html:27
 msgid "Start"

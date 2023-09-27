@@ -294,7 +294,7 @@ def load_github():
                     <small id="repoDesc">{}</small>\
                 </div>\
                 <a class="btn btn-sm btn-light h-25" id="githubStar"\
-                   href="https://github.com/weijiang1994/Blogin" target="_blank">Star</a>\
+                   href="https://github.com/charlieqf/Blogin" target="_blank">Star</a>\
             </div>\
             <div id="shield-svg" class="text-left pr-1 d-flex">\
                 <div class="mr-1">{}</div><div class="mr-1">{}</div><div class="mr-1">{}</div>\
