@@ -63,7 +63,7 @@ class User(db.Model, UserMixin):
         self.set_role()
 
     def __repr__(self):
-        return 'username<%s> email<%s> website<%s>' % (self.username, self.email, self.website)
+        return 'username<%s> email<%s> website<%s> avatar<%s>' % (self.username, self.email, self.website, self.avatar)
 
     def set_password(self, pwd):
         self.password = generate_password_hash(pwd)
@@ -79,7 +79,7 @@ class User(db.Model, UserMixin):
 
     def set_role(self):
         if self.roles is None:
-            if self.email == '804022023@qq.com' or self.email == 'weijiang1994_1@qq.com':
+            if self.email == 'charlieqf@gmail.com':
                 self.roles = Role.query.filter_by(name='ADMIN').first()
             else:
                 self.roles = Role.query.filter_by(name='USER').first()

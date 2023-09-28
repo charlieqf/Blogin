@@ -24,7 +24,7 @@
         <div class="container">
             {% include "_flash.html" %}
             <div>
-                {{ gallery_bread(_("Photography is poor three generations"), _("Gallery")) }}
+                {{ gallery_bread(_("Life moments"), _("Gallery")) }}
                 {% for photo in photos %}
                     <div class="border-card card photo-card">
                         <a href="/gallery/photo/{{ photo.id }}" class="card-thumbnail">

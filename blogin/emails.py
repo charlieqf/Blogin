@@ -59,7 +59,7 @@ def send_reset_password_email(user, token, ver_code):
 
 def send_network_warning_email(blacklist):
     send_mail(subject='WARNING',
-              to_email='804022023@qq.com',
+              to_email='charlieqf@gmail.com',
               template='email/network-warning',
               blacklist=blacklist)
 
@@ -74,7 +74,7 @@ def send_comment_email(user, blog):
 
 def send_server_warning_mail(cpu_rate, mem_rate):
     send_mail(subject='WARNING!',
-              to_email='804022023@qq.com',
+              to_email='charlieqf@gmail.com',
               template='email/warning',
               cpu_rate=cpu_rate,
               mem_rate=mem_rate)

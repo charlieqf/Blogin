@@ -197,15 +197,15 @@ msgid "%(count)s comments"
 msgstr "%(count)s条评论"
 
 #: blogin/templates/main/gallery.html:27
-msgid "Photography is poor three generations"
-msgstr "摄影穷三代"
+msgid "Life moments"
+msgstr "Life moments"
 
 #: blogin/templates/main/gallery.html:48
 msgid "Random"
 msgstr "换一批"
 
 #: blogin/templates/main/index.html:17 blogin/templates/main/index.html:46
-msgid "ClearWater"
+msgid "Charles"
 msgstr "Charles"
 
 #: blogin/templates/main/index.html:17
@@ -217,7 +217,7 @@ msgid "Website"
 msgstr "个人网站"
 
 #: blogin/templates/main/index.html:26
-msgid "ClearWater's Website"
+msgid "Charles's Website"
 msgstr "Charles的个人网站"
 
 #: blogin/templates/main/index.html:27

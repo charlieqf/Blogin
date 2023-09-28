@@ -34,7 +34,8 @@ def index():
     loves = LoveMe.query.first()
     loves = 0 if loves is None else loves.counts
     plans = Plan.query.filter_by(is_done=0).all()
-    su = User.query.filter(User.email == '804022023@qq.com').first()
+    su = User.query.filter(User.email == 'charlieqf@gmail.com').first()
+    print(su)
     flinks = FriendLink.query.filter(FriendLink.flag == 1).all()
     msg_borders = MessageBorder.query.filter(MessageBorder.flag == 0, MessageBorder.parent_id == 0
                                              ).order_by(MessageBorder.timestamps.desc()).all()[0:5]
@@ -137,7 +138,7 @@ def new_comment():
     blog_id = request.form.get('blogID')
     reply_id = request.form.get('replyID')
     parent_id = request.form.get('parentID')
-    admin = User.query.filter_by(email='804022023@qq.com').first()
+    admin = User.query.filter_by(email='charlieqf@gmail.com').first()
     author = current_user._get_current_object()
     notify = comment
     blog = Blog.query.get_or_404(blog_id)

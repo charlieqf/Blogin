@@ -44,7 +44,7 @@ class TestBase(unittest.TestCase):
         ph1 = Photo(title='test photo1', description='test photo1 description',
               save_path='/test/save/', save_path_s='/test/save/', level=1)
 
-        super_user = User(username='Admin', email='804022023@qq.com', password='12345678', confirm=1,
+        super_user = User(username='Admin', email='charlieqf@gmail.com', password='12345678', confirm=1,
                           avatar='/static/img/admin/admin.jpg')
         super_user.set_password('12345678')
 
