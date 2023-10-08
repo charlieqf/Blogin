@@ -210,16 +210,16 @@ MONTH = {1: '01-31',
          -1: '11-01',
          0: '12-01'
          }
-GITHUB_STAR = 'https://img.shields.io/github/stars/weijiang1994/Blogin?style=social'
-GITHUB_FORK = 'https://img.shields.io/github/forks/weijiang1994/Blogin?style=social'
-GITHUB_WATCHER = 'https://img.shields.io/github/watchers/weijiang1994/Blogin?style=social'
+GITHUB_STAR = 'https://img.shields.io/github/stars/charlieqf/Blogin?style=social'
+GITHUB_FORK = 'https://img.shields.io/github/forks/charlieqf/Blogin?style=social'
+GITHUB_WATCHER = 'https://img.shields.io/github/watchers/charlieqf/Blogin?style=social'
 
-GITHUB_STAR_DARK = 'https://img.shields.io/github/stars/weijiang1994/Blogin?style=flat-square'
-GITHUB_FORK_DARK = 'https://img.shields.io/github/forks/weijiang1994/Blogin?style=flat-square'
-GITHUB_WATCHER_DARK = 'https://img.shields.io/github/watchers/weijiang1994/Blogin?style=flat-square'
+GITHUB_STAR_DARK = 'https://img.shields.io/github/stars/charlieqf/Blogin?style=flat-square'
+GITHUB_FORK_DARK = 'https://img.shields.io/github/forks/charlieqf/Blogin?style=flat-square'
+GITHUB_WATCHER_DARK = 'https://img.shields.io/github/watchers/charlieqf/Blogin?style=flat-square'
 
-USER_API = 'https://api.github.com/users/weijiang1994'
-REPO_API = 'https://api.github.com/repos/weijiang1994/Blogin'
+USER_API = 'https://api.github.com/users/charlieqf'
+REPO_API = 'https://api.github.com/repos/charlieqf/Blogin'
 
 
 def is_empty(value, show=None):

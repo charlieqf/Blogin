@@ -136,7 +136,7 @@
     <footer class="container-fluid mt-4 py-0 bg-footer">
         <div class="card-body text-center px-0 f-14">
             <p class="card-text mb-1">Copyright&nbsp;©&nbsp;<span id="year-info">2020</span>
-                <a href="https://github.com/weijiang1994" class="text-decoration-none footer-a" target="_blank"
+                <a href="https://github.com/charlieqf" class="text-decoration-none footer-a" target="_blank"
                    title="{{ _("Author's Github") }}">Blogin</a>.&nbsp;Design&nbsp;by&nbsp;Flask1.01.
             </p>
             <p class="mb-0">
@@ -150,12 +150,12 @@
             <script>
                 function getNewYear() {
                     let d = new Date();
-                    let old = new Date('2020/08/28');
+                    let old = new Date('2023/10/01');
                     let x = document.getElementById("year-info");
                     x.innerHTML = d.getFullYear();
                     let y = document.getElementById("web-day");
                     let dd = Math.floor((d.getTime() - old.getTime()) / (24 * 3600 * 1000));
-                    let d_str = "| {{ _('Online') }} " + dd + " {{ _('day') }}";
+                    let d_str = "| {{ _('Online') }} " + dd + " {{ _('days') }}";
                     y.innerHTML = d_str;
                 }
 

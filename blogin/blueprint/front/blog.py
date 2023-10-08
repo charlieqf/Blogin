@@ -287,7 +287,7 @@ def load_github():
         avatar = rd.get('avatar')
         repo_desc = rd.get('repo_desc')
     return '<div style="border-bottom: 1px solid rgba(58,10,10,0.19); margin-bottom: 5px;padding-bottom: 3px;" class="d-flex">\
-                <a href="https://github.com/weijiang1994/" target="_blank"><img class="avatar-s" id="githubAvatar"\
+                <a href="https://github.com/charlieqf/" target="_blank"><img class="avatar-s" id="githubAvatar"\
                                                                                 alt="avatar"\
                                                                                 src="{}"></a>\
                 <div class="ml-2">\

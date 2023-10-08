@@ -54,7 +54,7 @@ def login():
 
     form = LoginForm()
     if ban_ip is not None:
-        if int(ban_ip) >= 5:
+        if int(ban_ip) >= 100:
             flash('当前IP登录错误次数过多,已被禁止登录,请明天再试!', 'info')
             return render_template('main/auth/login.html', form=form)
 

@@ -1,12 +1,12 @@
 # Blogin
 
 ![python-depend.svg](https://7.dusays.com/2020/12/11/507ca007c94c0.svg)
-![stars](https://img.shields.io/github/stars/weijiang1994/blogin)
-![fork](https://img.shields.io/github/forks/weijiang1994/blogin)
+![stars](https://img.shields.io/github/stars/charlieqf/blogin)
+![fork](https://img.shields.io/github/forks/charlieqf/blogin)
 
 Blogin is a personal blog website that base on flask development.
 
-[中文文档](https://github.com/weijiang1994/Blogin/blob/master/README.md)
+[中文文档](https://github.com/charlieqf/Blogin/blob/master/README.md)
 
 ## Introduce
 
@@ -144,7 +144,7 @@ The personal blog site developed by the Flask Python Web framework consists of t
    For this step, the git environment must be configured on the local machine first. Please surf the Internet for details.
 
    ```shell
-   git clone https://github.com/weijiang1994/Blogin.git
+   git clone https://github.com/charlieqf/Blogin.git
    ```
 
 2. **Configure environment variables** 

@@ -144,18 +144,25 @@ def blog_content_edit(blog_id):
         bs = BeautifulSoup(form.body.data, 'html.parser')
         catalogue = [link.get('id') for link in bs.find_all('a') if link.get('id')]
         post_cate = PostContent.query.filter_by(post_id=blog.id).first()
+        print("check point 1")
         if post_cate:
             post_cate.content = str(catalogue)
         else:
             db.session.add(PostContent(content=str(catalogue), post_id=blog.id))
 
+        print("check point 2")
         update_contribution()
         history_file_path = basedir + '/history/' + get_md5(get_current_time()) + '.txt'
         with open(history_file_path, 'w', encoding='utf-8') as f:
+            print("check point 3")
             f.write(history_content)
+            print("check point 4")
         bh = BlogHistory(blog_id=blog.id, save_path=history_file_path, timestamps=datetime.datetime.now())
+        print("check point 5")
         db.session.add(bh)
+        print("check point 6")
         db.session.commit()
+        print("check point 7")
 
         return redirect(url_for('blog_bp.blog_article', blog_id=blog_id))
 

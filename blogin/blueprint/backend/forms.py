@@ -16,7 +16,7 @@ from blogin.models import BlogType, FriendLink
 
 
 class PostForm(FlaskForm):
-    title = StringField(u'博客标题', validators=[Length(min=3, max=50, message='用户名长度必须在3到20位之间')],
+    title = StringField(u'博客标题', validators=[Length(min=3, max=200, message='文章标题必须在3到200字之间')],
                         render_kw={'class': '', 'rows': 50, 'placeholder': '输入您的博客标题'})
     blog_type = SelectField(label=u'博客类型',
                             default=0,
@@ -38,7 +38,7 @@ class PostForm(FlaskForm):
 
 
 class EditPostForm(FlaskForm):
-    title = StringField(u'博客标题', validators=[Length(min=3, max=50, message='用户名长度必须在3到20位之间')],
+    title = StringField(u'博客标题', validators=[Length(min=3, max=200, message='文章标题必须在3到200字之间')],
                         render_kw={'class': '', 'rows': 50, 'placeholder': '输入您的博客标题'})
     blog_type = SelectField(label=u'博客类型', default=0, coerce=int)
     blog_level = SelectField(label=u'博客权限', choices=[(1, '公开'), (2, '私有')], validators=[DataRequired()],
@@ -75,7 +75,7 @@ class AddPhotoForm(FlaskForm):
 
 class EditPhotoInfoForm(FlaskForm):
     photo_title = StringField(u'相片标题',
-                              validators=[DataRequired(), Length(min=1, max=20, message='相片标题长度必须在1到20之间')],
+                              validators=[DataRequired(), Length(min=1, max=50, message='相片标题长度必须在1到50之间')],
                               render_kw={'class': '', 'rows': 50, 'placeholder': '输入照片标题'})
     photo_desc = TextAreaField(u'相片描述',
                                validators=[DataRequired(), Length(min=3, max=250, message='相片描述长度必须在3到250之间')])
@@ -113,7 +113,7 @@ class AddFlinkForm(FlaskForm):
 
 class AddPlanForm(FlaskForm):
     title = StringField(u'计划名称', validators=[DataRequired(),
-                                                Length(min=2, max=20, message='计划标题长度在2-20个字符之间')],
+                                                Length(min=2, max=50, message='计划标题长度在2-50个字符之间')],
                         render_kw={'class': '', 'rows': 50, 'placeholder': '请输入计划的标题名称'}
                         )
     total = StringField(u'总进度', validators=[DataRequired()],

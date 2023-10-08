@@ -73,7 +73,7 @@ msgstr "欢迎"
 
 #: blogin/templates/base.html:107
 msgid "Profile"
-msgstr "个人资料"
+msgstr "Profile"
 
 #: blogin/templates/base.html:110
 msgid "Notify"
@@ -104,27 +104,27 @@ msgid "Online"
 msgstr "网站已上线"
 
 #: blogin/templates/base.html:161
-msgid "day"
+msgid "days"
 msgstr "天"
 
 #: blogin/templates/slider.html:5
-msgid "One"
+msgid "One Quote a Day"
 msgstr "每日一句"
 
 #: blogin/templates/slider.html:50
 msgid "TODO"
-msgstr "近期计划"
+msgstr "To-do Tasks"
 
 #: blogin/templates/slider.html:54
 msgid "No Plan!"
 msgstr "暂无正在进行的计划！"
 
 #: blogin/templates/slider.html:69
-msgid "Activity"
+msgid "Activities"
 msgstr "最近活动"
 
 #: blogin/templates/slider.html:80
-msgid "Category"
+msgid "Categories"
 msgstr "文章类别"
 
 #: blogin/templates/slider.html:98
@@ -157,44 +157,44 @@ msgstr "当前位置"
 
 #: blogin/templates/main/blog.html:97
 msgid "Edit"
-msgstr "编辑"
+msgstr "Edit"
 
 #: blogin/templates/main/blog.html:112
 msgid "Introduce"
-msgstr "简介"
+msgstr "Description"
 
 #: blogin/templates/main/blog.html:126
 msgid "Copyright"
-msgstr "版权声明"
+msgstr "Copyright"
 
 #: blogin/templates/main/blog.html:126
-msgid "Write is not easy, please indicate the source when reprinting!"
-msgstr "原创不易，转载请注明出处~"
+msgid "please credit the source when reposting"
+msgstr "please credit the source when reposting"
 
 #: blogin/templates/main/blog.html:127
 msgid "Post Link"
-msgstr "文章链接"
+msgstr "Post Link"
 
 #: blogin/templates/main/blog.html:136
 msgid "Sponsor"
-msgstr "打赏"
+msgstr "Sponsor"
 
 #: blogin/templates/main/blog.html:156
-msgid "Buy Coffee~"
-msgstr "给作者买杯咖啡吧~"
+msgid "Buy me a coffee~"
+msgstr "Buy me a coffee~"
 
 #: blogin/templates/main/blog.html:166
 msgid "Wechat"
-msgstr "微信"
+msgstr "Wechat"
 
 #: blogin/templates/main/blog.html:170
 msgid "Alipay"
-msgstr "支付宝"
+msgstr "Alipay"
 
 #: blogin/templates/main/blog.html:182
 #, python-format
 msgid "%(count)s comments"
-msgstr "%(count)s条评论"
+msgstr "%(count)s comments"
 
 #: blogin/templates/main/gallery.html:27
 msgid "Life moments"
@@ -210,23 +210,23 @@ msgstr "Charles"
 
 #: blogin/templates/main/index.html:17
 msgid "'s Profile"
-msgstr "的个人资料"
+msgstr "'s Profile"
 
 #: blogin/templates/main/index.html:26
-msgid "Website"
-msgstr "个人网站"
+msgid "Description"
+msgstr "About"
 
 #: blogin/templates/main/index.html:26
-msgid "Charles's Website"
-msgstr "Charles的个人网站"
+msgid "Digital Dwellings, a place where tech and personal experiences reside."
+msgstr "Digital Dwellings, a place where tech and personal experiences reside."
 
 #: blogin/templates/main/index.html:27
-msgid "Start"
-msgstr "建站时间"
+msgid "Established"
+msgstr "Established"
 
 #: blogin/templates/main/index.html:28
-msgid "Email"
-msgstr "联系邮箱"
+msgid "Contact"
+msgstr "Contact"
 
 #: blogin/templates/main/index.html:30
 #, python-format

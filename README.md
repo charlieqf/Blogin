@@ -1,8 +1,8 @@
 # Blogin
 
 ![python-depend.svg](https://img.shields.io/badge/PYTHON-3.6%20%7C%203.7%20%7C%203.8%20%7C%203.9-blue)
-![stars](https://img.shields.io/github/stars/weijiang1994/blogin)
-![fork](https://img.shields.io/github/forks/weijiang1994/blogin)
+![stars](https://img.shields.io/github/stars/charlieqf/blogin)
+![fork](https://img.shields.io/github/forks/charlieqf/blogin)
 
 使用Flask+Bootstrap4开发的个人博客系统。
 
@@ -10,7 +10,7 @@
    
 在线演示地址: https://2dogz.cn
 
-[English Document](https://github.com/weijiang1994/Blogin/blob/master/README-EN.md)
+[English Document](https://github.com/charlieqf/Blogin/blob/master/README-EN.md)
 ## 功能介绍
 
 依赖于Flask Python Web框架开发的个人博客网站，包含有前台与后台两个部分。
@@ -272,7 +272,7 @@
    进行这一步本地机器上必须先配置好git环境，具体细节请网上冲浪查询。
 
    ```shell script
-   git clone https://github.com/weijiang1994/Blogin.git
+   git clone https://github.com/charlieqf/Blogin.git
    ```
 
 2. 配置环境变量
