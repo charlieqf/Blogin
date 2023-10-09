@@ -157,31 +157,31 @@ msgstr "当前位置"
 
 #: blogin/templates/main/blog.html:97
 msgid "Edit"
-msgstr "Edit"
+msgstr "编辑"
 
 #: blogin/templates/main/blog.html:112
-msgid "Introduce"
-msgstr "Description"
+msgid "Abstract"
+msgstr "摘要"
 
 #: blogin/templates/main/blog.html:126
 msgid "Copyright"
-msgstr "Copyright"
+msgstr "版权"
 
 #: blogin/templates/main/blog.html:126
 msgid "please credit the source when reposting"
-msgstr "please credit the source when reposting"
+msgstr "转载时请注明来源和作者"
 
 #: blogin/templates/main/blog.html:127
 msgid "Post Link"
-msgstr "Post Link"
+msgstr "文章链接"
 
 #: blogin/templates/main/blog.html:136
 msgid "Sponsor"
-msgstr "Sponsor"
+msgstr "赞助"
 
 #: blogin/templates/main/blog.html:156
 msgid "Buy me a coffee~"
-msgstr "Buy me a coffee~"
+msgstr "打赏作者~"
 
 #: blogin/templates/main/blog.html:166
 msgid "Wechat"
@@ -198,7 +198,7 @@ msgstr "%(count)s comments"
 
 #: blogin/templates/main/gallery.html:27
 msgid "Life moments"
-msgstr "Life moments"
+msgstr "生活"
 
 #: blogin/templates/main/gallery.html:48
 msgid "Random"
@@ -214,7 +214,7 @@ msgstr "'s Profile"
 
 #: blogin/templates/main/index.html:26
 msgid "Description"
-msgstr "About"
+msgstr "站点简介"
 
 #: blogin/templates/main/index.html:26
 msgid "Digital Dwellings, a place where tech and personal experiences reside."
@@ -222,11 +222,11 @@ msgstr "Digital Dwellings, a place where tech and personal experiences reside."
 
 #: blogin/templates/main/index.html:27
 msgid "Established"
-msgstr "Established"
+msgstr "建站日期"
 
 #: blogin/templates/main/index.html:28
 msgid "Contact"
-msgstr "Contact"
+msgstr "联系方式"
 
 #: blogin/templates/main/index.html:30
 #, python-format

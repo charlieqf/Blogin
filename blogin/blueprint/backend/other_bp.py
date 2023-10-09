@@ -336,8 +336,8 @@ def add_plan():
     form = AddPlanForm()
     if form.validate_on_submit():
         plans = Plan.query.filter_by(is_done=0).all()
-        if len(plans) >= 3:
-            flash('你已经有三条计划了,不要好高骛远哦!', 'info')
+        if len(plans) >= 5:
+            flash('你已经有五条计划了,不要好高骛远哦!', 'info')
             return redirect(url_for('blog_bp.index'))
         plan = Plan.query.filter_by(title=form.title.data).first()
         if plan:
