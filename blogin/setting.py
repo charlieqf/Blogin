@@ -82,8 +82,8 @@ class BaseConfig:
     SCHEDULER_API_ENABLED = True
 
     # Babel config
-    BABEL_DEFAULT_LOCALE = 'zh'
-    BABEL_DEFAULT_TIMEZONE = 'UTC+8'
+    BABEL_DEFAULT_LOCALE = 'en'
+    BABEL_DEFAULT_TIMEZONE = 'UTC+10'
     BABEL_TRANSLATION_DIRECTORIES = basedir + '/translations'
 
 
