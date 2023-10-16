@@ -26,26 +26,26 @@ def write_task_log(info):
         f.write(str(datetime.datetime.now()) + " " + info + '\n')
 
 
-@aps.task('cron', id='get_one', day='*', hour='08', minute='10', second='00')
-def get_one():
-    try:
-        with db.app.app_context():
-            date = datetime.date.today()
-            one = OneSentence.query.filter_by(day=date).first()
-            if not one:
-                import requests
-                from bs4 import BeautifulSoup
-                res = requests.get('http://wufazhuce.com/', timeout=30)
-                bs = BeautifulSoup(res.text, 'html.parser')
-                attr = {'class': 'fp-one-cita'}
-                d = bs.find_all('div', attrs=attr)
-                one = OneSentence(content=d[0].text, day=date)
-                db.session.add(one)
-                db.session.commit()
-                logger.info('插入每日一句成功')
-                rd.set('one', d[0].text)
-    except:
-        logger.error('插入每日一句失败,错误原因:\n' + traceback.format_exc())
+# @aps.task('cron', id='get_one', day='*', hour='08', minute='10', second='00')
+# def get_one():
+#     try:
+#         with db.app.app_context():
+#             date = datetime.date.today()
+#             one = OneSentence.query.filter_by(day=date).first()
+#             if not one:
+#                 import requests
+#                 from bs4 import BeautifulSoup
+#                 res = requests.get('http://wufazhuce.com/', timeout=30)
+#                 bs = BeautifulSoup(res.text, 'html.parser')
+#                 attr = {'class': 'fp-one-cita'}
+#                 d = bs.find_all('div', attrs=attr)
+#                 one = OneSentence(content=d[0].text, day=date)
+#                 db.session.add(one)
+#                 db.session.commit()
+#                 logger.info('插入每日一句成功')
+#                 rd.set('one', d[0].text)
+#     except:
+#         logger.error('插入每日一句失败,错误原因:\n' + traceback.format_exc())
 
 
 @aps.task('cron', id='do_job_3', day='*', hour='00', minute='00', second='50')

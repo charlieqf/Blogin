@@ -108,7 +108,7 @@ msgid "days"
 msgstr "天"
 
 #: blogin/templates/slider.html:5
-msgid "One Quote a Day"
+msgid "Quote of the Day"
 msgstr "每日一句"
 
 #: blogin/templates/slider.html:50

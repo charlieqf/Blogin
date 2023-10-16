@@ -15,8 +15,9 @@ from blogin.decorators import statistic_traffic
 import datetime
 from blogin.utils import redirect_back, github_social, BOOTSTRAP_SUFFIX
 from blogin.emails import send_comment_email
-from blogin.task import get_one
+#from blogin.task import get_one
 from flask_babel import gettext as _
+from sqlalchemy.sql.expression import func
 blog_bp = Blueprint('blog_bp', __name__)
 
 
@@ -307,10 +308,11 @@ def load_one():
     one = rd.get('one')
     # 防止服务器重启之后清空了redis数据导致前端获取不到当日one内容
     if not one:
-        one = OneSentence.query.filter_by(day=datetime.date.today()).first()
-        if not one:
-            get_one()
-            one = OneSentence.query.filter_by(day=datetime.date.today()).first()
+        one = OneSentence.query.order_by(func.rand()).first()
+        #one = OneSentence.query.filter_by(day=datetime.date.today()).first()
+        # if not one:
+        #     get_one()
+        #     one = OneSentence.query.filter_by(day=datetime.date.today()).first()
         if request.method == 'GET':
             return "<p class='mb-1'>{}</p>".format(one.content)
         else:
