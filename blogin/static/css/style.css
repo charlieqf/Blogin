@@ -73,6 +73,17 @@
     padding: 5px;
 }
 
+.video-card {
+    float: left;
+    width: 33.333%;
+    padding: 0.5rem 0.5rem 0 0.5rem;
+    border: 0;
+}
+
+.video-card .card-body {
+    padding: 5px;
+}
+
 .user-card {
     float: left;
     width: 20%;

@@ -48,9 +48,11 @@ class User(db.Model, UserMixin):
 
     roles = db.relationship('Role', back_populates='users')
     photo_comments = db.relationship('PhotoComment', back_populates='author', cascade='all')
+    video_comments = db.relationship('VideoComment', back_populates='author', cascade='all')
     login_logs = db.relationship('LoginLog', back_populates='user', cascade='all')
     blog_comments = db.relationship('BlogComment', back_populates='author', cascade='all')
     likes = db.relationship('LikePhoto', back_populates='user', cascade='all')
+    videolikes = db.relationship('LikeVideo', back_populates='user', cascade='all')
     statuses = db.relationship('States', back_populates='user')
     third_party = db.relationship('ThirdParty', back_populates='user')
 
@@ -221,6 +223,20 @@ class Photo(db.Model):
     likes = db.relationship('LikePhoto', back_populates='photo', cascade='all')
 
 
+@whooshee.register_model('title', 'description')
+class Video(db.Model):
+    __tablename__ = 'video'
+
+    id = db.Column(db.INTEGER, primary_key=True, nullable=False, comment='video id', autoincrement=True)
+    title = db.Column(db.String(40), nullable=False, comment='video title', default='""')
+    description = db.Column(db.String(300), nullable=False, comment='video description', default='""')
+    save_path = db.Column(db.String(200), nullable=False, comment='video save path')
+    create_time = db.Column(db.DateTime, default=datetime.now)
+    level = db.Column(db.INTEGER, default=0)
+    comments = db.relationship('VideoComment', back_populates='video', cascade='all')
+    likes = db.relationship('LikeVideo', back_populates='video', cascade='all')
+    
+    
 @whooshee.register_model('name')
 class Tag(db.Model):
     __tablename__ = 'tag'
@@ -247,6 +263,23 @@ class PhotoComment(db.Model):
     replies = db.relationship('PhotoComment', back_populates='replied', cascade='all')
     replied = db.relationship('PhotoComment', back_populates='replies', remote_side=[id])
 
+class VideoComment(db.Model):
+    __tablename__ = 'video_comment'
+
+    id = db.Column(db.INTEGER, primary_key=True)
+    body = db.Column(db.String(400))
+    timestamp = db.Column(db.DateTime, default=datetime.now, index=True)
+
+    parent_id = db.Column(db.INTEGER)
+    replied_id = db.Column(db.INTEGER, db.ForeignKey('video_comment.id'))
+    author_id = db.Column(db.INTEGER, db.ForeignKey('user.id'))
+    video_id = db.Column(db.INTEGER, db.ForeignKey('video.id'))
+    delete_flag = db.Column(db.INTEGER, default=0, comment='this comment delete flag 0 no 1 yes')
+
+    video = db.relationship('Video', back_populates='comments')
+    author = db.relationship('User', back_populates='video_comments')
+    replies = db.relationship('VideoComment', back_populates='replied', cascade='all')
+    replied = db.relationship('VideoComment', back_populates='replies', remote_side=[id])
 
 class LoveMe(db.Model):
     __tablename__ = 'loveme'
@@ -273,6 +306,17 @@ class LikePhoto(db.Model):
 
     photo = db.relationship('Photo', back_populates='likes')
     user = db.relationship('User', back_populates='likes')
+
+class LikeVideo(db.Model):
+    __tablename__ = 'like_video'
+
+    id = db.Column(db.INTEGER, primary_key=True, autoincrement=True)
+    vid_id = db.Column(db.INTEGER, db.ForeignKey('video.id'))
+    user_id = db.Column(db.INTEGER, db.ForeignKey('user.id'))
+    timestamp = db.Column(db.DateTime, default=datetime.now)
+
+    video = db.relationship('Video', back_populates='likes')
+    user = db.relationship('User', back_populates='videolikes')
 
 
 class VerifyCode(db.Model):

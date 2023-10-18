@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% from "macro.html" import gallery_bread with context %}
+{% from "macro.html" import videos_bread with context %}
 {% block head %}
     {{ super() }}
     <style>
@@ -7,7 +7,7 @@
             border: 5px solid rgba(0 123 255 / 5%);
             margin: 0px 0px 5px 0px;
         }
-        .photo-link{
+        .video-link{
             text-decoration: none;
             color: #0f0f0f;
         }
@@ -17,28 +17,28 @@
     </style>
 {% endblock %}
 {% block title %}
-    青年相册
+    My Videos
 {% endblock %}
 {% block content %}
     <main>
         <div class="container">
             {% include "_flash.html" %}
             <div>
-                {{ gallery_bread(_("Life moments"), _("Gallery")) }}
-                {% for photo in photos %}
+                {{ videos_bread(_("Life moments"), _("Videos")) }}
+                {% for video in videos %}
                     <div class="border-card card video-card">
-                        <a href="/gallery/photo/{{ photo.id }}" class="card-thumbnail">
-                            <img alt="{{ photo.title }}" class="card-img-top portrait" src="{{ photo.save_path_s }}">
+                        <a href="/videos/video/{{ video.id }}" class="card-thumbnail">
+                            <img alt="{{ video.title }}" class="card-img-top portrait" src="{{ video.save_path_s }}">
                         </a>
                         <div class="card-body">
-                            <a class="text-decoration-none text-muted" href="/gallery/photo/{{ photo.id }}"> {{ photo.title }} </a>
+                            <a class="text-decoration-none text-muted" href="/videos/video/{{ video.id }}"> {{ video.title }} </a>
                             <div class="row">
                                 <div class="col-lg-4">
-                                    <i class="fa fa-comment"></i> {{ photo.comments|length }}
-                                    <i class="fa fa-heart"></i> {{ photo.likes|length }}
+                                    <i class="fa fa-comment"></i> {{ video.comments|length }}
+                                    <i class="fa fa-heart"></i> {{ video.likes|length }}
                                 </div>
                                 <div class="col-lg-8 text-right">
-                                    <i class="fa fa-calendar"></i> {{ (photo.create_time|split)[0] }}
+                                    <i class="fa fa-calendar"></i> {{ (video.create_time|split)[0] }}
                                 </div>
                             </div>
                         </div>
