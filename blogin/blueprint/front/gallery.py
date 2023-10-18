@@ -46,7 +46,7 @@ def photo(photo_id):
         pre_link = None
     else:
         pre_link = '/gallery/photo/' + str(pre.id)
-    return render_template('main/photo.html', blog=img, nextLink=next_link, preLink=pre_link,
+    return render_template('main/photo.html', item=img, nextLink=next_link, preLink=pre_link,
                            comments=comments, replies=replies)
 
 

@@ -6,7 +6,7 @@
     <script src="https://cdn.ckeditor.com/ckeditor5/22.0.0/classic/ckeditor.js"></script>
 {% endblock %}
 {% block title %}
-    {{ video.title }}
+    {{ item.title }}
 {% endblock %}
 {% block content %}
     <style>
@@ -28,17 +28,17 @@
             <div class="row">
                 <div class="col-md-8">
                     <div class="border-card video">
-                        <a href="{{ video.save_path }}" target="_blank">
-                            <img src="{{ video.save_path }}" class="img-fluid">
+                        <a href="{{ item.save_path }}" target="_blank">
+                            <img src="{{ item.save_path }}" class="img-fluid">
                         </a>
                     </div>
                     <div class="text-right">
-                        <p title="{{ video.create_time }}" class="text-muted float-right small"><i class="fa fa-clock-o"></i> uploaded:{{ moment(video.create_time, local=True).fromNow(refresh=True) }}</p>
+                        <p title="{{ item.create_time }}" class="text-muted float-right small"><i class="fa fa-clock-o"></i> uploaded:{{ moment(item.create_time, local=True).fromNow(refresh=True) }}</p>
                     </div>
                     <br>
                     <div class="blog-content-div">
                         {% include "comment.html" %}
-                        <p class="text-muted"><strong>There are {{ video.comments|length }} comments</strong></p>
+                        <p class="text-muted"><strong>There are {{ item.comments|length }} comments</strong></p>
                         <hr>
                         {% include "commentContent.html" %}
                     </div>
@@ -68,12 +68,12 @@
                         <div class="card-body">
                             <div id="description">
                                 <p style="color: #9d9d9d; font-weight: bold;">
-                                    <i>{{ video.description }}</i>
+                                    <i>{{ item.description }}</i>
                                 </p>
                             </div>
                             <div id="tags">
                                 <p>
-                                    {% for tag in video.tags %}
+                                    {% for tag in item.tags %}
                                         <a class="badge badge-light" href="/videos/tag/{{ tag.id }}/"><span class="fa fa-tags"></span> {{ tag.name }}</a>
                                     {% endfor %}
                                 </p>
@@ -81,7 +81,7 @@
                             <div class="row">
 
                                 <div class="col-md-2">
-                                    <a name="{{ video.name }}" href="/videos/like/{{ video.id }}/" style="color: inherit;" class="btn btn-info">
+                                    <a name="{{ item.name }}" href="/videos/like/{{ item.id }}/" style="color: inherit;" class="btn btn-info">
                                         <i class="fa fa-heartbeat"></i>
                                     </a>
                                 </div>

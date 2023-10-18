@@ -55,7 +55,7 @@
     {{ moment.locale(auto_detect=True) }}
 {% endblock %}
 {% block title %}
-    {{ blog.title }}
+    {{ item.title }}
 {% endblock %}
 {% block content %}
     {% include "big-image.html" %}
@@ -90,32 +90,32 @@
                     <li class="breadcrumb-item">
                         <a class="text-info-a" href="/blog/cate/{{ cate.id }}/">{{ cate.name }}</a>
                     </li>
-                    <li class="breadcrumb-item active d-none d-md-block" aria-current="page">{{ blog.title }}</li>
+                    <li class="breadcrumb-item active d-none d-md-block" aria-current="page">{{ item.title }}</li>
                     <li class="breadcrumb-item active d-md-none" aria-current="page">{{ _('Position') }}</li>
                     {% if current_user.role_id == 1 %}
                         <li class="breadcrumb-item float-right" aria-current="page"><a
-                                href="/backend/blog/edit/{{ blog.id }}">{{ _('Edit') }}</a></li>
+                                href="/backend/blog/edit/{{ item.id }}">{{ _('Edit') }}</a></li>
                     {% endif %}
                 </ol>
             </nav>
             <div class="blog-content-div">
                 <div class="text-center">
-                    <h2 class="blog-title">{{ blog.title }}</h2>
+                    <h2 class="blog-title">{{ item.title }}</h2>
                 </div>
                 <div class="text-center">
-                    <span class="badge badge-important"><i class="fa fa-calendar"></i> {{ blog.create_time }}</span>
+                    <span class="badge badge-important"><i class="fa fa-calendar"></i> {{ item.create_time }}</span>
                     <span class="badge badge-important"><i class="fa fa-tag"></i> {{ cate.name }}</span>
-                    <span class="badge badge-important"><i class="fa fa-book"></i> {{ blog.read_times }}</span>
+                    <span class="badge badge-important"><i class="fa fa-book"></i> {{ item.read_times }}</span>
                     <hr>
                 </div>
                 <div class="text-muted">
                     <h1 class="introduce-h1">{{ _('Abstract') }}</h1>
-                    {{ blog.introduce }}
+                    {{ item.introduce }}
                     <hr>
                 </div>
                 <div class="div-article">
                     <article>
-                        {{ blog.content|safe }}
+                        {{ item.content|safe }}
                     </article>
                 </div>
             </div>
@@ -124,7 +124,7 @@
                     {{ article_content|safe }}
                     <div class="cc">
                         <div>{{ _('Copyright') }}：<i class="fa fa-cc-paypal"></i> {{ _('please credit the source when reposting') }}</div>
-                        <div>{{ _('Post Link')}}：<a class="text-info" href="https://digitaldwellings.tech/blog/article/{{ blog.id }}/">https://digitaldwellings.tech/blog/article/{{ blog.id }}/</a>
+                        <div>{{ _('Post Link')}}：<a class="text-info" href="https://digitaldwellings.tech/blog/article/{{ item.id }}/">https://digitaldwellings.tech/blog/article/{{ item.id }}/</a>
                         </div>
                     </div>
                     <div class="text-center">

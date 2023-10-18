@@ -39,7 +39,7 @@ def video(video_id):
         pre_link = None
     else:
         pre_link = '/videos/video/' + str(pre.id)
-    return render_template('main/video.html', blog=vid, nextLink=next_link, preLink=pre_link,
+    return render_template('main/video.html', item=vid, nextLink=next_link, preLink=pre_link,
                            comments=comments, replies=replies)
 
 

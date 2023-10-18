@@ -82,7 +82,7 @@ def blog_article(blog_id):
             order_by(BlogComment.timestamp.asc()).all()
         replies.append(reply)
     db.session.commit()
-    return render_template('main/blog.html', blog=blog, cate=cate, comments=comments, replies=replies,
+    return render_template('main/blog.html', item=blog, cate=cate, comments=comments, replies=replies,
                            histories=histories, next_post=next_post, pre_post=pre_post, content=content)
 
 
