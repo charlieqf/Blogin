@@ -28,7 +28,7 @@
                 {% for video in videos %}
                     <div class="border-card card video-card">
                         <a href="/videos/video/{{ video.id }}" class="card-thumbnail">
-                            <img alt="{{ video.title }}" class="card-img-top portrait" src="{{ video.save_path_s }}">
+                            <img alt="{{ video.title }}" class="card-img-top portrait" src="{{ video.thumbnail_path }}">
                         </a>
                         <div class="card-body">
                             <a class="text-decoration-none text-muted" href="/videos/video/{{ video.id }}"> {{ video.title }} </a>

@@ -78,18 +78,18 @@
         <div class="navbar-collapse collapse" id="collapsibleNavbar">
             <ul class="navbar-nav mr-auto">
                 {{ nav_item("blog_bp.index", _('Home'), 'fa fa-home') }}
-                {{ nav_item("gallery_bp.index", _('Gallery'), 'fa fa-photo') }}
-                {{ nav_item("videos_bp.index", _('Videos'), 'fa fa-photo') }}
+                {{ nav_item("gallery_bp.index", _('Gallery'), 'fa fa-camera') }}
+                {{ nav_item("videos_bp.index", _('Videos'), 'fa fa-film') }}
                 {{ nav_item("blog_bp.archive", _('Archive'), 'fa fa-archive') }}
-                {{ nav_item("tool_bp.index", _('Tool'), 'fa fa-steam') }}
+                {{ nav_item("tool_bp.index", _('Tools'), 'fa fa-wrench') }}
 
-                {{ dropmenu('SOUL', 'fa fa-subway',
+                <!-- {{ dropmenu('SOUL', 'fa fa-subway',
                             [['/soul/', 'fa fa-file-code-o mr-2', _('DJT')],
                              ['/ts-poem/', 'fa fa-file-text-o mr-2', _('Poem')],
                              ['/song-ci/', 'fa fa-file-text mr-2', _('Ci')],
                              ['/api/introduce/', 'fa fa-exchange mr-2', 'API'],
                              ['/rss-feed/index/', 'fa fa-rss-square mr-2', 'RSS'],
-                             ['/timeline/', 'fa fa-list-ol mr-2', _('Timeline')]]) }}
+                             ['/timeline/', 'fa fa-list-ol mr-2', _('Timeline')]]) }} -->
             </ul>
             <form class="form-inline my-2 my-lg-0 mr-4 f-17" method="get" action="/search">
                 <input class="form-control mr-sm-2 " type="search" name="q" placeholder="{{ _('Input Keyword') }}" aria-label="Search"

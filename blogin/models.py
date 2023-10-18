@@ -231,6 +231,7 @@ class Video(db.Model):
     title = db.Column(db.String(40), nullable=False, comment='video title', default='""')
     description = db.Column(db.String(300), nullable=False, comment='video description', default='""')
     save_path = db.Column(db.String(200), nullable=False, comment='video save path')
+    thumbnail_path = db.Column(db.String(200), nullable=False, comment='video thumbnail path')
     create_time = db.Column(db.DateTime, default=datetime.now)
     level = db.Column(db.INTEGER, default=0)
     comments = db.relationship('VideoComment', back_populates='video', cascade='all')

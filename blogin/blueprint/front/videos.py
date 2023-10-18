@@ -39,13 +39,16 @@ def video(video_id):
         pre_link = None
     else:
         pre_link = '/videos/video/' + str(pre.id)
+    print(vid.save_path)
     return render_template('main/video.html', item=vid, nextLink=next_link, preLink=pre_link,
                            comments=comments, replies=replies)
 
 
 @videos_bp.route('/<path>/<filename>')
 def get_blog_sample_vid(path, filename):
+    print("get_blog_sample_vid:", path, filename)
     path = basedir + '/uploads/videos/' + path + '/'
+    print(path)
     return send_from_directory(path, filename)
 
 

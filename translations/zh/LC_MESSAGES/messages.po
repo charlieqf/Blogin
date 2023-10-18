@@ -31,8 +31,12 @@ msgstr "相册"
 msgid "Archive"
 msgstr "归档"
 
+#: blogin/templates/base.html:75
+msgid "Archive"
+msgstr "归档"
+
 #: blogin/templates/base.html:76
-msgid "Tool"
+msgid "Tools"
 msgstr "工具"
 
 #: blogin/templates/base.html:79
