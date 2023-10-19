@@ -1,4 +1,4 @@
-from flask import Blueprint, render_template, send_from_directory, flash, redirect, request, url_for
+from flask import Blueprint, render_template, send_from_directory, flash, redirect, request, url_for, current_app
 from flask_login import login_required, current_user
 from sqlalchemy.sql.expression import func
 from blogin import basedir, db
@@ -31,16 +31,23 @@ def video(video_id):
         reply = VideoComment.query.filter_by(parent_id=comment.id, delete_flag=0).\
                 order_by(VideoComment.timestamp.desc()).all()
         replies.append(reply)
-    if nex is None:
-        next_link = None
-    else:
-        next_link = '/videos/video/' + str(nex.id)
-    if pre is None:
-        pre_link = None
-    else:
-        pre_link = '/videos/video/' + str(pre.id)
+        
+    next_link = url_for('.video', video_id=nex.id) if nex else None
+    pre_link = url_for('.video', video_id=pre.id) if pre else None
+        
+    # if nex is None:
+    #     next_link = None
+    # else:
+    #     next_link = '/videos/video/' + str(nex.id)
+    # if pre is None:
+    #     pre_link = None
+    # else:
+    #     pre_link = '/videos/video/' + str(pre.id)
+    cdn = current_app.config['CLOUDFRONT_URL']
+    cloudfront_path = cdn + vid.save_path
+    print("cloudfront_path:", cloudfront_path)
     print(vid.save_path)
-    return render_template('main/video.html', item=vid, nextLink=next_link, preLink=pre_link,
+    return render_template('main/video.html', item=vid, cloudfront_path=cloudfront_path, nextLink=next_link, preLink=pre_link,
                            comments=comments, replies=replies)
 
 

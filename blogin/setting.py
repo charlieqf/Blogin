@@ -46,6 +46,7 @@ class BaseConfig:
     CKEDITOR_FILE_UPLOADER = 'be_blog_bp.upload'
 
     BLOGIN_UPLOAD_PATH = os.path.join(basedir, 'uploads')
+    CLOUDFRONT_URL = 'https://d28cl0j4ueg9il.cloudfront.net'
 
     # SQL configure
     SQLALCHEMY_TRACK_MODIFICATIONS = False
