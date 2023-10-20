@@ -1,10 +1,9 @@
 """
 # coding:utf-8
 @Time    : 2021/03/12
-@Author  : jiangwei
+@Author  : charles feng
 @File    : msg_border.py
 @Desc    : msg_border
-@Software: PyCharm
 """
 from flask import Blueprint, render_template, request, flash, redirect, url_for
 from flask_login import login_required, current_user

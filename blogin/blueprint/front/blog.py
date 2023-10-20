@@ -1,9 +1,8 @@
 """
 # coding:utf-8
 @Time    : 2020/9/21
-@Author  : jiangwei
+@Author  : charles feng
 @File    : blog_bp
-@Software: PyCharm
 """
 from flask import Blueprint, render_template, flash, redirect, url_for, request, current_app, jsonify, abort
 from blogin.models import Blog, BlogType, LoveMe, LoveInfo, BlogComment, Photo, Notification, Timeline, VisitStatistics, \

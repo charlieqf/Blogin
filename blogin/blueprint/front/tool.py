@@ -1,9 +1,8 @@
 """
 # coding:utf-8
 @Time    : 2020/9/30
-@Author  : jiangwei
+@Author  : charles feng
 @File    : tool
-@Software: PyCharm
 """
 import datetime
 import os

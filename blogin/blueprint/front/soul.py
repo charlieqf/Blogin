@@ -1,9 +1,8 @@
 """
 # coding:utf-8
 @Time    : 2020/10/21
-@Author  : jiangwei
+@Author  : charles feng
 @File    : soul_bp
-@Software: PyCharm
 """
 from flask import Blueprint, render_template
 from sqlalchemy.sql.expression import func

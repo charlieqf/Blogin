@@ -1,10 +1,9 @@
 """
 # coding:utf-8
 @Time    : 2020/12/30
-@Author  : jiangwei
+@Author  : charles feng
 @File    : test_base.py
 @Desc    : test_front_blog
-@Software: PyCharm
 """
 import os
 

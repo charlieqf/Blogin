@@ -1,9 +1,8 @@
 """
 # coding:utf-8
 @Time    : 2020/9/30
-@Author  : jiangwei
+@Author  : charles feng
 @File    : forms
-@Software: PyCharm
 """
 from flask_wtf import FlaskForm
 from wtforms import StringField, SubmitField

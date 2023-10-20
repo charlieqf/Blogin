@@ -1,9 +1,7 @@
 """
 # coding:utf-8
-@Time    : 2020/9/22
-@Author  : jiangwei
+@Author  : charles feng
 @File    : blog_bp
-@Software: PyCharm
 """
 import os
 from bs4 import BeautifulSoup

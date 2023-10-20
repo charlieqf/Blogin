@@ -1,10 +1,9 @@
 """
 # coding:utf-8
 @Time    : 2021/03/11
-@Author  : jiangwei
+@Author  : charles feng
 @File    : rss.py
 @Desc    : rss
-@Software: PyCharm
 """
 from feedgen.feed import FeedGenerator
 from flask import make_response, Blueprint, render_template, request, url_for

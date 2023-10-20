@@ -1,9 +1,8 @@
 """
 # coding:utf-8
 @Time    : 2020/10/12
-@Author  : jiangwei
+@Author  : charles feng
 @File    : wsgi
-@Software: PyCharm
 """
 from blogin import create_app
 

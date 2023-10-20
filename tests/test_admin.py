@@ -1,10 +1,9 @@
 """
 # coding:utf-8
 @Time    : 2020/12/31
-@Author  : jiangwei
+@Author  : charles feng
 @File    : test_admin.py
 @Desc    : 测试后台管理页面功能
-@Software: PyCharm
 """
 from tests.test_base import TestBase
 from flask import url_for

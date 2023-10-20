@@ -1,9 +1,7 @@
 """
 # coding:utf-8
-@Time    : 2020/10/13
-@Author  : jiangwei
+@Author  : charles feng
 @File    : other_bp
-@Software: PyCharm
 """
 import os
 from datetime import datetime

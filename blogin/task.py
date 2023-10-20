@@ -1,9 +1,8 @@
 """
 # coding:utf-8
 @Time    : 2020/11/19
-@Author  : jiangwei
+@Author  : charles feng
 @File    : task.py
-@Software: PyCharm
 """
 from blogin.models import Contribute, VisitStatistics, LikeStatistics, CommentStatistics, OneSentence
 from apscheduler.executors.base import BaseExecutor

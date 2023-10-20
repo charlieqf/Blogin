@@ -1,10 +1,9 @@
 """
 # coding:utf-8
 @Time    : 2020/12/30
-@Author  : jiangwei
+@Author  : charles feng
 @File    : test_user_blog.py
 @Desc    : test_user_blog
-@Software: PyCharm
 """
 from tests.test_base import TestBase
 from flask import url_for

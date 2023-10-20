@@ -1,9 +1,8 @@
 """
 # coding:utf-8
 @Time    : 2020/10/26
-@Author  : jiangwei
+@Author  : charles feng
 @File    : oauth
-@Software: PyCharm
 """
 from flask import Blueprint, abort, redirect, url_for, flash
 from flask_oauthlib.client import OAuthResponse

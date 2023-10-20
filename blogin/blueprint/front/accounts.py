@@ -1,9 +1,8 @@
 """
 # coding:utf-8
 @Time    : 2020/9/24
-@Author  : jiangwei
+@Author  : charles feng
 @File    : accounts
-@Software: PyCharm
 """
 from flask import Blueprint, render_template, send_from_directory, flash, redirect, url_for, request, current_app
 from flask_login import login_required, current_user, logout_user

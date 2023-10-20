@@ -1,9 +1,8 @@
 """
 # coding:utf-8
 @Time    : 2020/10/19
-@Author  : jiangwei
+@Author  : charles feng
 @File    : monitor
-@Software: PyCharm
 """
 import psutil
 from blogin.emails import send_server_warning_mail

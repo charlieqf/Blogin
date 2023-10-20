@@ -1,9 +1,8 @@
 """
 # coding:utf-8
 @Time    : 2020/10/26
-@Author  : jiangwei
+@Author  : charles feng
 @File    : api
-@Software: PyCharm
 """
 from flask import Blueprint, request, jsonify, render_template
 from blogin.models import Soul, Blog, Poem, Poet, SongCi, SongCiAuthor

@@ -1,9 +1,8 @@
 """
 # coding:utf-8
 @Time    : 2020/9/23
-@Author  : jiangwei
+@Author  : charles feng
 @File    : utils
-@Software: PyCharm
 """
 import datetime
 import hashlib

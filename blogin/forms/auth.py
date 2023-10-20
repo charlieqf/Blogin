@@ -1,9 +1,8 @@
 """
 # coding:utf-8
 @Time    : 2020/9/21
-@Author  : jiangwei
+@Author  : charles feng
 @File    : auth
-@Software: PyCharm
 """
 from flask_login import current_user
 from flask_wtf import FlaskForm

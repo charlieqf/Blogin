@@ -1,9 +1,7 @@
 """
 # coding:utf-8
-@Time    : 2020/10/14
-@Author  : jiangwei
+@Author  : charles feng
 @File    : index_bp
-@Software: PyCharm
 """
 import datetime
 from datetime import timedelta
