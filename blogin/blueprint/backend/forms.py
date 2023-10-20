@@ -82,6 +82,32 @@ class EditPhotoInfoForm(FlaskForm):
     submit = SubmitField(u'保存信息')
 
 
+class AddVideoForm(FlaskForm):
+    # 添加视频前端表单
+    video_title = StringField(u'视频标题',
+                              validators=[DataRequired(), Length(min=1, max=20, message='视频标题长度必须在1到20之间')],
+                              render_kw={'class': '', 'rows': 50, 'placeholder': '输入视频标题'})
+    video_desc = TextAreaField(u'视频描述',
+                               validators=[DataRequired(), Length(min=3, max=250, message='视频描述长度必须在3到250之间')])
+    video_file = FileField(label=u'视频文件',
+                         validators=[DataRequired(), FileAllowed(['mp4'], '只接收mp4视频')],
+                         render_kw={'value': "上传", 'class': 'btn btn-default'})
+    video_level = SelectField(label=u'照片权限', choices=[(1, '公开'), (2, '私有')], validators=[DataRequired()],
+                              default=1, coerce=int)
+    tags = StringField(u'视频标签',
+                       validators=[DataRequired(), Length(min=1, max=50, message='标签长度必须在1-50之间')],
+                       render_kw={'placeholder': '请输入视频标签，用空格隔开'})
+    submit = SubmitField(u'发布视频')
+
+
+class EditVideoInfoForm(FlaskForm):
+    video_title = StringField(u'相视频标题',
+                              validators=[DataRequired(), Length(min=1, max=50, message='视频标题长度必须在1到50之间')],
+                              render_kw={'class': '', 'rows': 50, 'placeholder': '输入视频标题'})
+    video_desc = TextAreaField(u'视频描述',
+                               validators=[DataRequired(), Length(min=3, max=250, message='视频描述长度必须在3到250之间')])
+    submit = SubmitField(u'保存信息')
+
 class TimelineForm(FlaskForm):
     timeline_title = StringField(u'名称', validators=[Length(min=3, max=50, message='用户名长度必须在3到20位之间')],
                                  render_kw={'class': '', 'rows': 50, 'placeholder': '请输入时间线标题'})

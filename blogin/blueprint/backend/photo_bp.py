@@ -62,18 +62,26 @@ def add_photo():
 
         img_path = '/gallery/' + folder + '/' + img_file
         photo = Photo(title=title, description=desc, save_path=img_path, save_path_s=small_path)
-
+        print("photo in db.session:", photo in db.session)
         # 将tag信息添加到相片中
         for name in tags.split():
             tag = Tag.query.filter_by(name=name).first()
             if tag is None:
                 tag = Tag(name=name)
                 db.session.add(tag)
+                print("1 photo in db.session:", photo in db.session)
                 db.session.commit()
             if tag not in photo.tags:
                 photo.tags.append(tag)
+                print("2 photo in db.session:", photo in db.session)
                 db.session.commit()
+        from sqlalchemy.orm.attributes import instance_state
+        print("instance_state(photo).dict:", instance_state(photo).dict)
+                
+        print("db.session.new:", db.session.new)                
         update_contribution()
+        print("db.session.new:", db.session.new)
+
         db.session.commit()
         flash('相片添加完成~', 'success')
         return redirect(url_for('gallery_bp.index'))

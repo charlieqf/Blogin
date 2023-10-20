@@ -19,6 +19,7 @@ import os
 from blogin.blueprint.front.blog import blog_bp
 from blogin.blueprint.backend.blog_bp import be_blog_bp
 from blogin.blueprint.backend.photo_bp import be_photo_bp
+from blogin.blueprint.backend.video_bp import be_video_bp
 from blogin.blueprint.backend.account_manage_bp import user_m_bp
 from blogin.blueprint.backend.other_bp import other_bp
 from blogin.blueprint.backend.index_bp import index_bp_be
@@ -176,6 +177,7 @@ def register_blueprint(app: Flask):
     app.register_blueprint(blog_bp)
     app.register_blueprint(be_blog_bp)
     app.register_blueprint(be_photo_bp)
+    app.register_blueprint(be_video_bp)
     app.register_blueprint(auth_bp)
     app.register_blueprint(accounts_bp)
     app.register_blueprint(gallery_bp)
