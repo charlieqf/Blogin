@@ -62,6 +62,7 @@ def index():
 
 @tool_bp.route('/ocr/', methods=['GET', 'POST'])
 def ocr():
+    print("entry point of ocr")
     if request.method == 'POST':
         img = request.files['image']
         filename = img.filename
@@ -70,8 +71,10 @@ def ocr():
         img.save(basedir + '/uploads/ocr/' + filename)
         category = request.form.get('category')
         img_url = '/tool/ocr/' + filename
+        print(category, filename)
         c_ocr = OCR(filename=basedir + r'/uploads/ocr/' + filename, category=category)
         nums, texts = ocr_result(category, c_ocr)
+        print(nums, texts)
         return jsonify({'tag': 1, 'nums': nums, 'texts': texts, 'img': img_url})
     return render_template("main/tool/ocr.html")
 
@@ -207,6 +210,8 @@ def get_blog_sample_img(path, filename):
 def ocr_result(category, _ocr: OCR):
     if category == '文字识别':
         return _ocr.ocr()
+    if category == 'Medical':
+        return _ocr.ocr_medical()
     if category == '身份证识别':
         return _ocr.ocr_idcard()
     if category == '银行卡识别':

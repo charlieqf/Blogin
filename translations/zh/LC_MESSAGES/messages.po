@@ -539,22 +539,26 @@ msgid "Identification Type"
 msgstr "识别类型"
 
 #: blogin/templates/main/tool/ocr.html:47
+msgid "Medical"
+msgstr "医学内容"
+
+#: blogin/templates/main/tool/ocr.html:48
 msgid "Text Recognition"
 msgstr "文字识别"
 
-#: blogin/templates/main/tool/ocr.html:48
+#: blogin/templates/main/tool/ocr.html:49
 msgid "IDCard Recognition"
 msgstr "身份证识别"
 
-#: blogin/templates/main/tool/ocr.html:49
+#: blogin/templates/main/tool/ocr.html:50
 msgid "Bank Card Recognition"
 msgstr "银行卡识别"
 
-#: blogin/templates/main/tool/ocr.html:50
+#: blogin/templates/main/tool/ocr.html:51
 msgid "Drive Card Recognition"
 msgstr "驾驶证识别"
 
-#: blogin/templates/main/tool/ocr.html:51
+#: blogin/templates/main/tool/ocr.html:52
 msgid "Car license recognizer"
 msgstr "车牌识别"
 

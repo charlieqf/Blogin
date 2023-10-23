@@ -36,6 +36,7 @@ from bs4 import BeautifulSoup
 import logging
 from logging.handlers import RotatingFileHandler
 from flask_babel import gettext as T
+import pytesseract
 
 config_ini = configparser.ConfigParser()
 
@@ -281,7 +282,7 @@ IP_REG = '((25[0-5]|2[0-4]\d|((1\d{2})|([1-9]?\d)))\.){3}(25[0-5]|2[0-4]\d|((1\d
 OCR_URL = 'https://aip.baidubce.com/rest/2.0/ocr/v1/'
 OCR_TOKEN = config_ini.get('baidu', 'token')
 OCR_HEADERS = {'content-type': 'application/x-www-form-urlencoded'}
-OCR_CATEGORY = {'文字识别': 'accurate_basic', '身份证识别': 'idcard', '银行卡识别': 'bankcard',
+OCR_CATEGORY = {'Medical': 'Medical', '文字识别': 'accurate_basic', '身份证识别': 'idcard', '银行卡识别': 'bankcard',
                 '驾驶证识别': 'driving_license', '车牌识别': 'license_plate'}
 BANK_CARD_TYPE = {0: '不能识别', 1: '借记卡', 2: '信用卡'}
 LANGUAGE = {'中文': 'zh-CN', '英文': 'en', '日语': 'ja', '法语': 'fr', '俄语': 'ru'}
@@ -604,6 +605,33 @@ class OCR:
         for text in res.get('words_result'):
             texts += text.get('words') + '\n'
         return nums, texts
+
+    def ocr_medical(self):
+        text = pytesseract.image_to_string(self.filename)
+        print(text)
+        return len(text.split()), text
+        # print(text)
+        # ### NER layer ###
+
+        # # Load the SciSpacy model
+        # nlp = spacy.load("en_core_sci_md")
+
+        # # Process the text extracted from OCR
+        # doc = nlp(text)
+
+        # ### Postprocessing layer ###
+
+        # # Loop through recognized entities and print canonical name
+        # for ent in doc.ents:
+        #     print(f"Entity: {ent.text}, Label: {ent.label_}, Canonical Name: {ent.text}")
+            
+        # response = requests.post(self.url, data={"image": self.img}, headers=OCR_HEADERS)
+        # res = response.json()
+        # nums = res.get("words_result_num")
+        # texts = ''
+        # for text in res.get('words_result'):
+        #     texts += text.get('words') + '\n'
+        # return nums, texts
 
     def ocr_idcard(self):
         response = requests.post(self.url, data={"id_card_side": "front", "image": self.img}, headers=OCR_HEADERS)

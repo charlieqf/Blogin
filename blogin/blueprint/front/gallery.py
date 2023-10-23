@@ -11,6 +11,7 @@ from blogin import basedir, db
 from blogin.models import Photo, LikePhoto, Notification, Tag, VisitStatistics, CommentStatistics, LikeStatistics
 from blogin.models import PhotoComment
 from blogin.decorators import statistic_traffic
+from sqlalchemy import desc
 
 gallery_bp = Blueprint('gallery_bp', __name__, url_prefix='/gallery')
 
@@ -18,7 +19,8 @@ gallery_bp = Blueprint('gallery_bp', __name__, url_prefix='/gallery')
 @gallery_bp.route('/all/', methods=['GET', 'POST'])
 @statistic_traffic(db, VisitStatistics)
 def index():
-    photos = Photo.query.filter_by(level=0).order_by(func.random()).limit(9)
+    # order photos by id desc
+    photos = Photo.query.filter_by(level=0).order_by(desc(Photo.id)).limit(9)
     return render_template('main/gallery.html', photos=photos)
 
 
